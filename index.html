@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML4E - Machine Learning For Everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0a192f;
+            color: #8892b0;
+        }
+
+        .navbar {
+            background-color: #020c1b;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            color: #ccd6f6;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 100px 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #ccd6f6;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            background-color: #112240;
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .project-card {
+            background-color: #112240;
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            color: #64ffda;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #112240;
+            border: 1px solid #233554;
+            color: #ccd6f6;
+        }
+
+        button {
+            background-color: #64ffda;
+            color: #0a192f;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #020c1b;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>ML4E</h1>
+            <p>Machine Learning For Everyone</p>
+            <p>Research • Development • Innovation</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>ML4E is a student-run organization dedicated to making machine learning accessible to everyone. We focus
+                on:</p>
+            <br>
+            <p class="highlight">→ Research Projects</p>
+            <p class="highlight">→ Hackathons & Competitions</p>
+            <p class="highlight">→ Workshops & Learning Sessions</p>
+            <br>
+            <p>Whether you're a beginner or an experienced practitioner, we provide resources and opportunities to grow
+                your ML skills.</p>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <h3>Intro to Neural Networks</h3>
+                <p>Date: October 15, 2023</p>
+                <p>Hands-on workshop covering the fundamentals of deep learning.</p>
+            </div>
+            <div class="event-card">
+                <h3>HackML 2023</h3>
+                <p>Date: November 1-3, 2023</p>
+                <p>Annual 48-hour machine learning hackathon.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>COVID-19 Prediction Model</h3>
+                <p>Time-series analysis using LSTM networks</p>
+                <p class="highlight">Tech Stack: Python, TensorFlow, Pandas</p>
+            </div>
+            <div class="project-card">
+                <h3>Automatic Essay Scoring</h3>
+                <p>NLP pipeline for automated essay evaluation</p>
+                <p class="highlight">Tech Stack: PyTorch, Transformers, Scikit-learn</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Get Involved</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea rows="5" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Connect with us:</p>
+        <div class="social-icons">
+            <i class="fab fa-github"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <p>© 2025 ML4E. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
